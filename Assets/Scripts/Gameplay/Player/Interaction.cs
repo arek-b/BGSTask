@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using static UnityEngine.InputSystem.InputAction;
 
@@ -7,7 +6,7 @@ namespace Gameplay.Player
 {
     public class Interaction : MonoBehaviour
     {
-        private HashSet<GameObject> gameObjectsInTrigger = new HashSet<GameObject>();
+        private readonly HashSet<GameObject> gameObjectsInTrigger = new();
 
         public void OnInteract(CallbackContext callbackContext)
         {
