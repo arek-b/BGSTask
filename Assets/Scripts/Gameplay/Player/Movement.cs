@@ -16,6 +16,11 @@ namespace Gameplay.Player
 
         [SerializeField] private Rigidbody2D myRigidbody = null;
 
+        [SerializeField] private Collider2D interactionTriggerDown = null;
+        [SerializeField] private Collider2D interactionTriggerUp = null;
+        [SerializeField] private Collider2D interactionTriggerRight = null;
+        [SerializeField] private Collider2D interactionTriggerLeft = null;
+
         private void FixedUpdate()
         {
             myRigidbody.MovePosition(myRigidbody.position + speed * Time.fixedDeltaTime * normalizedDirection);
@@ -30,6 +35,38 @@ namespace Gameplay.Player
             {
                 animator.SetFloat(horizontalDirectionHash, normalizedDirection.x);
                 animator.SetFloat(verticalDirectionHash, normalizedDirection.y);
+                UpdateInteractionTriggerOrientation();
+            }
+        }
+
+        private void UpdateInteractionTriggerOrientation()
+        {
+            interactionTriggerDown.enabled = false;
+            interactionTriggerUp.enabled = false;
+            interactionTriggerRight.enabled = false;
+            interactionTriggerLeft.enabled = false;
+
+            if (Mathf.Abs(normalizedDirection.x) >= Mathf.Abs(normalizedDirection.y))
+            {
+                if (normalizedDirection.x > 0)
+                {
+                    interactionTriggerRight.enabled = true;
+                }
+                else
+                {
+                    interactionTriggerLeft.enabled = true;
+                }
+            }
+            else
+            {
+                if (normalizedDirection.y < 0)
+                {
+                    interactionTriggerDown.enabled = true;
+                }
+                else
+                {
+                    interactionTriggerUp.enabled= true;
+                }
             }
         }
     }
