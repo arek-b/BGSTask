@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 399e01ed60023704fb0352d763c53f72, type: 3}
+  m_Name: FrameOffsets
+  m_EditorClassIdentifier: 
+  offsets:
+  - clip: {fileID: 7400000, guid: 58840a55982c8a045b317eeba2d84c03, type: 2}
+    frameOffset: 0
+  - clip: {fileID: 7400000, guid: cfebe180cfd0f0b4997b0a7dd39338f6, type: 2}
+    frameOffset: 1
+  - clip: {fileID: 7400000, guid: 6ad1a743fc82566469a3016b5b8b7d62, type: 2}
+    frameOffset: 2
+  - clip: {fileID: 7400000, guid: b6f8992f8e27b0948a2b46aa38ed7e99, type: 2}
+    frameOffset: 3
+  - clip: {fileID: 7400000, guid: 32b13c2b42f730e4f9168bad9d117ae5, type: 2}
+    frameOffset: 4
+  - clip: {fileID: 7400000, guid: 26336edd0abc9eb429d4e4d32716cc77, type: 2}
+    frameOffset: 10
+  - clip: {fileID: 7400000, guid: c85817eea886f314ea64101b4cf5636f, type: 2}
+    frameOffset: 16
+  - clip: {fileID: 7400000, guid: 70b146dbbf7632b40b67edd0b8caa7d2, type: 2}
+    frameOffset: 22
